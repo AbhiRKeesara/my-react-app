@@ -19,7 +19,7 @@ a{
 
 .Hero{
   background-image: url('../assets/wallpaper3.jpg');
-  height: 920px;
+  height: 820px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -32,6 +32,17 @@ a{
   padding: 150px 50px;
   text-align: center;
 }
+
+.reactImage{
+  width: 40px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .Hero h1{
   margin: 0;
@@ -104,6 +115,7 @@ a{
 }
 
 .love p{
+  padding-top: 20px;
   font-size: 15px;
   padding-left: 10px;
   text-align: center;

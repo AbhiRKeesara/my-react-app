@@ -5,15 +5,16 @@ import Section from '../components/Section';
 import Wave from '../components/Wave';
 import {FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
+import Footer from '../components/Footer';
 
-
+const currentYear = new Date().getFullYear()
 const IndexPage = () => (
   <div>
     <div className="Hero">
       <div className="HeroGroup">
          <h1> Hello World! </h1> 
-         <p> Welcome to my new portfolio site. </p> 
-         <Link to = "/page-2/" > My old portfolio site </Link>
+         <p> Welcome to my portofolio site <img className="reactImage" src={require('../assets/logo-react.png')}/> </p> 
+         <a href="https://abhinayreddykeesara.me">My another colorful portfolio site</a>
         <Wave />
       </div>
     </div>
@@ -31,51 +32,58 @@ const IndexPage = () => (
     <div className="Cards">
       <h2> Portfolio</h2>
       <div className="CardGroup">
+        <a href = "https://github.com/AbhiRKeesara/Best-websites-as-a-programmer-you-should-visit" >
         <Card 
         title = "Websites a programmer should visit"
         text = "Writing"
         image = {require('../assets/wallpaper.jpg')}
+        links = "www.google.com"
         />
+        </a>
+        <a href = "https://github.com/AbhiRKeesara/ToDoLists" >
         <Card 
         title = "ToDOLists"
         text = "Swift & iOS"
         image = {require('../assets/wallpaper2.jpg')}
         />
+        </a>
+        <a href="https://github.com/AbhiRKeesara/ARCADE-GAME">
         <Card 
-        title = "Forgger Arcade Game"
+        title = "Arcade Game"
         text = "JavaScript HMTL CSS"
         image = {require('../assets/wallpaper3.jpg')}
         />
+        </a>
+        <a href="https://github.com/AbhiRKeesara/AbhiRKeesara.io">
         <Card 
         title = "My Resume"
         text = "JavaScript HMTL CSS"
         image = {require('../assets/wallpaper4.jpg')}
         />
+        </a>
+        <a href="https://github.com/AbhiRKeesara/AutoProject">
         <Card 
         title = "Automation Framework"
         text = "Java Selenium Cucumber"
         image = {require('../assets/wallpaper.jpg')}
         />
-        < Card
+        </a>
+        <a href="https://github.com/AbhiRKeesara/TweeterBots">
+        <Card
         title = "Twitter Bot"
         text = "NodeJS Twitter API"
         image = {
           require('../assets/wallpaper3.jpg')
         }
         />
+        </a>
       </div>
     </div>
+    <Footer />
     <div className="love">
-     <p> Made with <FontAwesomeIcon className="pulse" icon={faHeart}/> in React -Copyright (c) 2018 Abhinay Reddy Keesara</p>
+     <p> Made with <FontAwesomeIcon className="pulse" icon={faHeart}/> in React -&copy; Abhinay Reddy Keesara {currentYear}.</p>
     </div>
   </div>
 )
 
 export default IndexPage
-
-
-// M0 87.1596 C316 87.1597 444 160 884 52.0001 C1324 - 55.9999 1320.29 34.966 1538 71.251 C1814 117.251 2156 189.252 2560 87.1597 V233 .161 L0 233.161 V87 .1596 Z;
-
-// M0 53.6584 C158 11.0001 213 0 363 0 C513 0 855.555 115.001 1154 115.001 C1440 115.001 1626 - 38.0004 2560 53.6585 V199 .66 L0 199.66 V53 .6584 Z;
-
-// M0 25.9086 C277 84.5821 433 65.736 720 25.9086 C934 .818 - 3.9019 1214.06 - 5.23669 1442 8.06597 C2079 45.2421 2208 63.5007 2560 25.9088 V171 .91 L0 171.91 V25 .9086 Z

@@ -4,12 +4,12 @@ import Wave from './Wave';
 
 const SectionGroup = styled.div`
   background: url(${props => props.image});
-  height: 720px;
+  height: 820px;
   backgound-size: cover;
   display: grid;
   grid-template-rows: 300px auto;
   grid-gap: 20px;
-  postion: relative;
+  position: relative;
 
   @media (max-width: 640px){
       height: 920px;
@@ -57,13 +57,13 @@ const SectionText = styled.p`
 `
 
 const WaveBottom = styled.div` 
-    postion: absolute;
+    position: absolute;
     width: 100%;
     bottom: -6px;
 
 `
 const WaveTop = styled.div `
-    postion: absolute;
+    position: absolute;
     width: 100%;
     top: -6px;
     transform: rotate(180deg);
@@ -72,13 +72,14 @@ const WaveTop = styled.div `
 
 const Section = props => (
     <SectionGroup image={props.image}>
-        {/* <WaveTop><Wave /></WaveTop> */}
+        <WaveTop><Wave /></WaveTop>
+        <WaveBottom > <Wave /> </WaveBottom>
         <SectionLogo src = {props.logo}/>
             <SectionTitleGroup>
                 <SectionTitle>{props.title}</SectionTitle>
                 <SectionText>{props.text}</SectionText>
             </SectionTitleGroup>
-        {/* <WaveBottom> <Wave /> </WaveBottom> */}
+        
     </SectionGroup>
 )
 export default Section

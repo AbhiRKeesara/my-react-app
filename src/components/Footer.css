@@ -1,0 +1,14 @@
+/* heart animation */
+@keyframes pound {
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  .footerImagesAnimation{
+    margin: 0 3px;
+    font-size: 20px;
+    animation: pound 0.9s infinite alternate;
+    -webkit-animation: pound 0.9s infinite alternate;
+   
+  }
